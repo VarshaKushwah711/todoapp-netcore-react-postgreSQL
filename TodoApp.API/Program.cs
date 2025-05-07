@@ -1,5 +1,6 @@
 using TodoApp.API.Data;
 using Microsoft.EntityFrameworkCore;
+using TodoApp.API.Mappings;
 
 //Creating the Builder:
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,7 @@ builder.Services.AddCors(options =>
         policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 });
 
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

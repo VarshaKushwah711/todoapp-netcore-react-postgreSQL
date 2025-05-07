@@ -10,3 +10,4 @@ namespace TodoApp.API.Data
         public DbSet<TodoItem> TodoItems { get; set; }  = null!;
     }
 }
+// Yeh DB se connection aur table access handle karta hai using EF Core.
